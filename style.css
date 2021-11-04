@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ :focus,
+ :active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.wrapper {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/ 1fr;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    padding: 15px;
+    background-color: #F7EA01;
+    border: 0.4px solid #F7EA01;
+    box-shadow: inset 0 0 4px;
+    align-items: center;
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
+
+.header__logo {
+    border-radius: 50%;
+    background-color: green;
+    width: 60px;
+    height: 60px;
+    grid-column: 2/3;
+}
+
+.header__menu {
+    grid-column: 3/4;
+}
+
+.header__list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+}
+
+.header__list a {
+    margin: 0 0 0 20px;
+}
+
+.menu__button {
+    color: white;
+    background-color: #F7EA01;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+}
+
+.footer {
+    display: grid;
+    grid-area: footer;
+    background-color: black;
+    height: 50px;
+}
+
+.footer__text {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+}
